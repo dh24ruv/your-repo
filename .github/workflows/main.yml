@@ -17,3 +17,46 @@ jobs:
       
       - name: Run test script
         run: python test_script.py
+name: Auto-Rerun Jupyter Notebook & Log to WandB
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-notebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install numpy pandas scikit-learn wandb jupyter nbconvert
+
+      - name: Set up WandB API Key
+        env:
+          WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
+        run: echo "WANDB_API_KEY is set"
+
+      - name: Run Jupyter Notebook
+        run: |
+          jupyter nbconvert --to notebook --execute distance_classification.ipynb --output output_notebook.ipynb
+
+      - name: Upload Notebook & Output Images
+        uses: actions/upload-artifact@v3
+        with:
+          name: notebook-results
+          path: |
+            output_notebook.ipynb
+            images/
