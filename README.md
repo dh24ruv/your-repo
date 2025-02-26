@@ -67,4 +67,12 @@ Feel free to contribute by:
 import wandb
 wandb.login(key="6b5771bc0b74e92cf3a179bdf9eae6e4b7cea630")
 <img width="1120" alt="Screenshot 2025-02-25 at 10 52 41 PM" src="https://github.com/user-attachments/assets/39ee37f6-2c7f-44d7-a7b6-f67d20765b40" />
+<img width="1376" alt="image" src="https://github.com/user-attachments/assets/d911682c-93ea-4ad8-bd0b-3502cf528486" />
+<img width="1007" alt="image" src="https://github.com/user-attachments/assets/d7e8aab8-d44b-4c80-89ae-baca2b43ec4f" />
+<img width="999" alt="image" src="https://github.com/user-attachments/assets/e83efa3f-50fb-48dc-bceb-bfd2c8380b56" />
+<img width="1005" alt="image" src="https://github.com/user-attachments/assets/a983a51f-2630-4705-b72a-655dc08773f2" />
+<img width="1001" alt="image" src="https://github.com/user-attachments/assets/9ef1f0df-02f6-4d4d-95c7-fa6653cdcf38" />
+
+
+
 
